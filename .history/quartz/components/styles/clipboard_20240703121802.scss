@@ -1,0 +1,38 @@
+.clipboard-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  right: 6px;
+  top: 6px;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  color: var(--gray);
+  // border-color: var(--dark);
+  background-color: #6c91a145;
+  border: 1px solid #6c91a145;
+  border-radius: 4px;
+  opacity: 0;
+  transition: 0.2s;
+
+  & > svg {
+    fill: var(--light);
+    filter: contrast(0.3);
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #e7e7e7;
+    // border-color: var(--secondary);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+pre {
+  &:hover > .clipboard-button {
+    opacity: 1;
+    transition: 0.2s;
+  }
+}

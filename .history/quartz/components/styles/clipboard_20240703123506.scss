@@ -1,0 +1,42 @@
+.clipboard-button {
+  all: unset;
+  font-size: 1rem;
+  color: #666; /* 存在感较低的文字颜色 */
+  background-color: #e0e0e0; /* 存在感较低的背景颜色 */
+  font-style: italic; /* 斜体显示 */
+  position: absolute;
+  display: flex;
+  float: right;
+  right: 6px;
+  top: 6px;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  color: var(--gray);
+  // border-color: var(--dark);
+  opacity: 0;
+  transition: 0.2s;
+
+  & > svg {
+    fill: var(--light);
+    filter: contrast(0.3);
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #a9616150;
+    border: 1px solid #a9616150;
+    // border-color: var(--secondary);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+pre {
+  &:hover > .clipboard-button {
+    opacity: 1;
+    transition: 0.2s;
+  }
+}
